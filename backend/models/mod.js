@@ -9,9 +9,9 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    mobNum: {
+    mobNumb: {
         required: true,
-        typer: Number
+        type: Number
     }
 }
 );

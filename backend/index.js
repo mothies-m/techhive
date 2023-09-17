@@ -25,8 +25,8 @@ app.get('/contact', async(req,res) => {
 app.post('/contact/add', async(req) => {
     const data = new Model({
         name: req.body.name,
-        desc: req.body.email,
-        mobNum: req.body.mobNum
+        email: req.body.email,
+        mobNumb: req.body.mobNumb
     });
     await data.save();
 });
