@@ -13,7 +13,7 @@ require('dotenv').config();
 mongoose.connect("mongodb+srv://gogdrigo:huntking@cluster0.8k2sy6o.mongodb.net/drigo");
 
 const database = mongoose.connection;
-const Model = require('./src/mod');
+const Model = require('./models/mod');
 
 database.once('connected', () => {console.log('ok')})
 
