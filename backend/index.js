@@ -17,15 +17,16 @@ const Model = require('./models/mod');
 
 database.once('connected', () => {console.log('ok')})
 
-app.get('/item', async(req,res) => {
+app.get('/contact', async(req,res) => {
     const data = await Model.find();
         res.json(data);
 });
 
-app.post('/item/add', async(req) => {
+app.post('/contact/add', async(req) => {
     const data = new Model({
         name: req.body.name,
-        desc: req.body.desc
+        desc: req.body.email,
+        mobNum: req.body.mobNum
     });
     await data.save();
 });

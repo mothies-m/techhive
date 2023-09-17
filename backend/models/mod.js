@@ -5,9 +5,13 @@ const dataSchema = new mongoose.Schema({
         required: true,
         type: String
     },
-    desc: {
+    email: {
         required: true,
         type: String
+    },
+    mobNum: {
+        required: true,
+        typer: Number
     }
 }
 );

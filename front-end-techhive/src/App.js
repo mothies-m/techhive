@@ -11,12 +11,12 @@ export default function App() {
     const name = e.target.userNameInput.value;
     const email = e.target.userEmailInput.value;
     const mobNumb = e.target.userPhoneNumberInput.value;
-    axios.post(`http://localhost:3000/item/add`, {name, email, mobNumb})
+    axios.post(`http://localhost:3001/contact/add`, {name, email, mobNumb})
         .then(alert("added"))
   }
 
   function getdata(){
-    axios.get('http://localhost:3000/item')
+    axios.get('http://localhost:3001/contact')
       .then(res => {
        setInfos(res.data);
     })
